@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Zeyada&display=swap');
+
+
+
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(88, 3, 47);
+  background: linear-gradient(90deg, rgba(88, 3, 47, 1) 0%, rgba(76, 0, 130, 1) 8%, rgba(204, 68, 19, 1) 59%, rgba(235, 0, 255, 1) 100%);
+  background-size: cover; /* Change this to control how the background image is displayed */
+  background-image: url("https://www.psdgraphics.com/wp-content/uploads/2016/07/retro-roses.jpg");
+  background-position: center center;
+  background-blend-mode: multiply;
+  backdrop-filter: opacity(0%);
+  background-repeat: no-repeat;
+  
+}
+
+.maincontainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.paper {
+  background-image: url("https://www.psdgraphics.com/wp-content/uploads/2020/03/pink-paper.jpg");
+  background-size: 500px;
+  background-position: center center;
+  padding: 20px 100px;
+/*  min-width: 800px; */
+  
+  transform: rotateZ(-5deg);
+  box-shadow: 1px 15px 20px 0px rgba(0,0,0,0.5);
+  
+  position: absolute;
+}
+
+.paper.heart {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  padding: 0;
+  border-radius: 50%;
+}
+
+.paper.image {
+  padding: 10px;
+}
+.paper.image p {
+  font-size: 30px;
+}
+
+img {
+  max-height: 250px;
+  width: 100%;
+  user-select: none;
+}
+
+.paper.heart::after {
+  content: "";
+  background-image: url('https://cdn.pixabay.com/photo/2016/03/31/19/25/cartoon-1294994__340.png');
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: 150px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 0.6;
+}
+
+p {
+  font-family: 'Zeyada';
+  font-weight: 700;
+  font-size: 50px;
+  color: rgb(0,0,100);
+  opacity: 0.75;
+  user-select: none;
+  margin: 0;
+ filter: drop-shadow(2px 1.5px 1px rgba(0,0,105,0.9));
+}
+@media (max-width: 600px) {
+  body {
+    font-size: 14px; /* Decrease the base font size */
+  }
+
+  .paper {
+    width:150px; /* Decrease the width of the paper elements */
+    height: auto; /* Adjust height if necessary */
+    transform: scale(0.8); /* Scale down the paper elements */
+  }
+
+  /* Add additional styles for other elements if necessary */
+}
+
+
+
+/* 🔹 Responsive Styling for Tablets */
+@media (max-width: 768px) {
+  .paper {
+    width: 200px;
+    padding: 15px;
+    font-size: 14px; /* Reduce text size */
+  }
+
+  .paper.image img {
+    width: 120px;
+  }
+}
+
+/* 🔹 Responsive Styling for Mobile Phones */
+@media (max-width: 480px) {
+  .paper {
+    width: 150px;
+    padding: 10px;
+    font-size: 12px; /* Further reduce text size */
+  }
+
+  .paper.image img {
+    width: 100px;
+  }
+}
